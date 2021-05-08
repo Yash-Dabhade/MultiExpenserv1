@@ -1,0 +1,2 @@
+rootProject.name = "MultiExpenserv1"
+include ':app'
