@@ -1,5 +1,5 @@
 package com.example.multiexpenserv1;
-
+// Getting Started  First Activity
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -25,5 +25,6 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("FirstTimeInstalled","Yes");
             editor.apply();
         }
+
     }
 }
