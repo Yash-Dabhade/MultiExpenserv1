@@ -3,144 +3,141 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".main">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageView30"
         android:layout_width="266dp"
         android:layout_height="58dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:src="@drawable/input1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/imageView31"
         android:layout_width="266dp"
         android:layout_height="58dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="132dp"
         android:src="@drawable/input1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imageView32"
         android:layout_width="266dp"
         android:layout_height="58dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="216dp"
         android:src="@drawable/input1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="448dp"
-        android:src="@drawable/getting_started_1_background"
+        android:layout_marginBottom="440dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/getting_started_2_background" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:src="@drawable/wallet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wallet" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:src="@drawable/shield"
+        android:layout_marginTop="164dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/income" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
-        android:src="@drawable/getting_started"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageView28"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/income_details" />
 
     <EditText
-        android:id="@+id/First_Name"
+        android:id="@+id/Monthly_Income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName"
+        android:hint="Monthly Income"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <EditText
-        android:id="@+id/Last_Name"
+        android:id="@+id/Current_Balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="144dp"
         android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
+        android:hint="Current Balance"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <EditText
-        android:id="@+id/Email_Address"
+        android:id="@+id/Extra_Income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="228dp"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Extra Income"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <ImageView
-        android:id="@+id/Next_Button_GS1"
+        android:id="@+id/Finish_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:src="@drawable/button_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView32"
+        app:srcCompat="@drawable/button_bg" />
 
-    <TextView
-        android:id="@+id/text_b"
+    <ImageView
+        android:id="@+id/imageView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="Next"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/Next_Button_GS1"
-        app:layout_constraintEnd_toEndOf="@+id/Next_Button_GS1"
-        app:layout_constraintStart_toStartOf="@+id/Next_Button_GS1" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/Finish_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Finish_Button"
+        app:layout_constraintStart_toStartOf="@+id/Finish_Button"
+        app:srcCompat="@drawable/button_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
