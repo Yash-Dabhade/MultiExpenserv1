@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("Email", email);
                         editor.apply();
                         startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
+                        finish();
                     }
                     else{
                         Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
