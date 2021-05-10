@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class GettingStarted_two extends AppCompatActivity {
 
     private EditText Montly_Income,Current_Balance,Extra_Income;
@@ -26,13 +28,23 @@ public class GettingStarted_two extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putString("Monthly_Income",Montly_Income.toString());
-                editor.putString("Current_Balance",Current_Balance.toString());
-                editor.putString("Extra_Income",Extra_Income.toString());
-                editor.putString("FirstTimeInstalled","Yes");
-                editor.apply();
-                startActivity(new Intent(GettingStarted_two.this,Home.class));
-                finish();
+                String mincome,cbalance,eincome;
+                mincome=Montly_Income.getText().toString();
+                cbalance=Current_Balance.getText().toString();
+                eincome=Extra_Income.getText().toString();
+                if(!(mincome.isEmpty()||cbalance.isEmpty()||eincome.isEmpty())) {
+                    editor.putString("Monthly_Income",mincome);
+                    editor.putString("Current_Balance", cbalance);
+                    editor.putString("Extra_Income", eincome);
+                    editor.putString("FirstTimeInstalled", "Yes");
+                    editor.apply();
+                    startActivity(new Intent(GettingStarted_two.this, Home.class));
+                    finish();
+                }
+                else {
+                    Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
             }
         });
 

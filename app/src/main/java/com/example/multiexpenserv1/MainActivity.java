@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText FirstName,LastName,Email;
@@ -33,11 +35,22 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("FirstName", FirstName.toString());
-                    editor.putString("LastName", LastName.toString());
-                    editor.putString("Email", Email.toString());
-                    editor.apply();
-                    startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
+                    String fname, lname, email;
+                    fname = FirstName.getText().toString();
+                    lname = LastName.getText().toString();
+                    email = Email.getText().toString();
+                    // Checking if the data is not null
+                    if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
+                        editor.putString("FirstName", fname);
+                        editor.putString("LastName", lname);
+                        editor.putString("Email", email);
+                        editor.apply();
+                        startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
+                    }
+                    else{
+                        Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                    }
                 }
             });
 
