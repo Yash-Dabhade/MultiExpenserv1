@@ -5,15 +5,22 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class DbHandler extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "user_details.db";
-    public static final String FIRST_NAME  = "first_name";
+    public static final String DATABASE_NAME = "multiexpenser_db";
+    public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";
     public static final String EMAIL = "email";
     public static final String MONTHLY_INCOME = "monthly_income";
@@ -31,6 +38,7 @@ public class DbHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
         db.execSQL("create table user_table " + "(first_name text,last_name text,email text,monthly_income text, current_balance text, extra_income text)");
+
     }
 
     @Override
@@ -52,18 +60,27 @@ public class DbHandler extends SQLiteOpenHelper {
         db.insert("user_table", null, contentValues);
         return true;
     }
-    public String getCurrentBalanceDB(){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select  * from user_table", null );
-        res.moveToFirst();
-        String cbalance=res.getString(res.getColumnIndex(CURRENT_BALANCE));
-        return cbalance;
-    }
-    public String getFirstNameDB(){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select  * from user_table", null );
-        res.moveToFirst();
-        String fname=res.getString(res.getColumnIndex(FIRST_NAME));
-        return fname;
-    }
 }
+//    public String getCurrentBalanceDB() {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        ArrayList<String> array_list = new ArrayList<String>();
+//        Cursor res = db.rawQuery("select  * from user_table", null);
+//        res.moveToFirst();
+//        while (res.isAfterLast() == false) {
+//            array_list.add(res.getString(res.getColumnIndex(CURRENT_BALANCE)));
+//            res.moveToNext();
+//        }
+//        return array_list.get(0);
+//    }
+//    public String getFirstNameDB() {
+//        ArrayList<String> array_list = new ArrayList<String>();
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor res = db.rawQuery("select  * from user_table", null);
+//        res.moveToFirst();
+//        while (res.isAfterLast() == false) {
+//            array_list.add(res.getString(res.getColumnIndex(FIRST_NAME)));
+//            res.moveToNext();
+//        }
+//        return array_list.get(0);
+//    }
+//}

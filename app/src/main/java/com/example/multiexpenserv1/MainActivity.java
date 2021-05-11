@@ -46,13 +46,12 @@ public class MainActivity extends AppCompatActivity {
                     lname = LastName.getText().toString();
                     email = Email.getText().toString();
 
-                    //Setting data into the intent
-                    intent.putExtra("MULTIEXPENSER_FIRST_NAME",fname);
-                    intent.putExtra("MULTIEXPENSER_LAST_NAME",lname);
-                    intent.putExtra("MULTIEXPENSER_EMAIL",email);
-
                     // Checking if the data is not null
                     if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
+                        editor.putString("First_Name",fname);
+                        editor.putString("Last_Name",lname);
+                        editor.putString("email",email);
+                        editor.apply();
                         startActivity(intent);
                         finish();
                     }

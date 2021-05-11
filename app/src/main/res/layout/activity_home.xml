@@ -110,12 +110,12 @@
         android:textColor="#E4E4E1"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView24"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
         app:layout_constraintTop_toBottomOf="@+id/imageView29"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/Home_Balance"
