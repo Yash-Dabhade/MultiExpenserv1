@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("email",email);
                         editor.apply();
                         startActivity(intent);
+                        overridePendingTransition(R.anim.slide_out_left,R.anim.slide_in_right);
                         finish();
                     }
                     else{

@@ -2,6 +2,7 @@ package com.example.multiexpenserv1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -49,6 +50,7 @@ public class GettingStarted_two extends AppCompatActivity {
 
                     //Starting home activity
                     startActivity(new Intent(GettingStarted_two.this, Home.class));
+                    overridePendingTransition(R.anim.slide_out_left,R.anim.slide_in_right);
                     finish();
                 }
                 else {

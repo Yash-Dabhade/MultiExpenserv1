@@ -78,7 +78,7 @@
         app:srcCompat="@drawable/balance_is" />
 
     <ImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/share"
         android:layout_width="37dp"
         android:layout_height="29dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView24"
@@ -94,7 +94,7 @@
         android:layout_width="171dp"
         android:layout_height="51dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView23"
-        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintEnd_toStartOf="@+id/share"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
