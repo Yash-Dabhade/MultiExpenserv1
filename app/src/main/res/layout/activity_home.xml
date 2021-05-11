@@ -21,7 +21,7 @@
         android:id="@+id/imageView29"
         android:layout_width="515dp"
         android:layout_height="93dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="95dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.393"
@@ -86,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintVertical_bias="0.1"
         app:srcCompat="@drawable/share_new" />
 
     <ImageView
@@ -116,18 +116,6 @@
         app:layout_constraintStart_toEndOf="@+id/imageView23"
         app:layout_constraintTop_toBottomOf="@+id/imageView29"
         app:layout_constraintVertical_bias="0.279" />
-
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="36dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView23"
-        app:layout_constraintEnd_toStartOf="@+id/imageView28"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
-        app:srcCompat="@drawable/wallet" />
 
     <TextView
         android:id="@+id/Home_Balance"
@@ -186,6 +174,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView31"
         app:srcCompat="@drawable/icon_holder" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView23"
+        app:layout_constraintEnd_toStartOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        app:srcCompat="@drawable/wallet" />
 
     <ImageView
         android:id="@+id/imageView35"
@@ -312,6 +312,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView34"
         app:layout_constraintEnd_toEndOf="@+id/imageView34"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="@+id/imageView34"
         app:layout_constraintTop_toBottomOf="@+id/imageView39"
         app:layout_constraintVertical_bias="0.166"
