@@ -33,9 +33,9 @@ public class GettingStarted_two extends AppCompatActivity {
                 cbalance=Current_Balance.getText().toString();
                 eincome=Extra_Income.getText().toString();
                 if(!(mincome.isEmpty()||cbalance.isEmpty()||eincome.isEmpty())) {
-                    editor.putString("Monthly_Income",mincome);
-                    editor.putString("Current_Balance", cbalance);
-                    editor.putString("Extra_Income", eincome);
+                    editor.putInt("Monthly_Income",Integer.parseInt(mincome));
+                    editor.putInt("Current_Balance",Integer.parseInt(cbalance));
+                    editor.putInt("Extra_Income", Integer.parseInt(eincome));
                     editor.putString("FirstTimeInstalled", "Yes");
                     editor.apply();
                     startActivity(new Intent(GettingStarted_two.this, Home.class));

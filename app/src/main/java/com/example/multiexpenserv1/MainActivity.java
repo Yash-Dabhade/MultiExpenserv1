@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         String FirstTime=sharedPreferences.getString("FirstTimeInstalled","");
         if(FirstTime.equals("Yes")) {
             startActivity(new Intent(MainActivity.this,Home.class));
+            finish();
         }
         else {
             FirstName = findViewById(R.id.First_Name);
@@ -41,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     email = Email.getText().toString();
                     // Checking if the data is not null
                     if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
-                        editor.putString("FirstName", fname);
-                        editor.putString("LastName", lname);
+                        editor.putString("First_Name", fname);
+                        editor.putString("Last_Name", lname);
                         editor.putString("Email", email);
                         editor.apply();
                         startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
@@ -54,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
-
-
         }
     }
 }
