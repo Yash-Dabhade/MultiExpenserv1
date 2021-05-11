@@ -33,14 +33,28 @@ public class GettingStarted_two extends AppCompatActivity {
                 mincome=Montly_Income.getText().toString();
                 cbalance=Current_Balance.getText().toString();
                 eincome=Extra_Income.getText().toString();
-                Toast.makeText(GettingStarted_two.this, mincome+" "+cbalance+" "+eincome, Toast.LENGTH_SHORT).show();
+
+                //Checking whether data is not null
                 if(!(mincome.isEmpty()||cbalance.isEmpty()||eincome.isEmpty())) {
                     editor.putString("FirstTimeInstalled", "Yes");
                     editor.apply();
+                    //Getting intent
+                    Intent intent=getIntent();
+                    // Creating A user object
+                    user u=new user();
+                    //Setting Data
+                    u.setFirst_name(intent.getStringExtra("MULTIEXPENSER_FIRST_NAME"));
+                    u.setLast_name(intent.getStringExtra("MULTIEXPENSER_LAST_NAME"));
+                    u.setEmail(intent.getStringExtra("MULTIEXPENSER_EMAIL"));
+                    u.setMonthly_income(Long.parseLong(mincome));
+                    u.setCurrent_balance(Long.parseLong(cbalance));
+                    u.setExtra_income(Long.parseLong(eincome));
+                    //Starting home activity
                     startActivity(new Intent(GettingStarted_two.this, Home.class));
                     finish();
                 }
                 else {
+                    //Giving warning to the user to fill all the details
                     Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
                     snackbar.show();
                 }

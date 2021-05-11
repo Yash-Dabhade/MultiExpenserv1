@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         //Cheking for Onbard process
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         String FirstTime=sharedPreferences.getString("FirstTimeInstalled","");
+
+
+
         if(FirstTime.equals("Yes")) {
             startActivity(new Intent(MainActivity.this,Home.class));
             finish();
@@ -37,17 +40,24 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
+                    Intent intent=new Intent(MainActivity.this, GettingStarted_two.class);
                     String fname, lname, email;
                     fname = FirstName.getText().toString();
                     lname = LastName.getText().toString();
                     email = Email.getText().toString();
+
+                    //Setting data into the intent
+                    intent.putExtra("MULTIEXPENSER_FIRST_NAME",fname);
+                    intent.putExtra("MULTIEXPENSER_LAST_NAME",lname);
+                    intent.putExtra("MULTIEXPENSER_EMAIL",email);
+
                     // Checking if the data is not null
-                    Toast.makeText(MainActivity.this, fname+" "+lname, Toast.LENGTH_SHORT).show();
                     if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
-                        startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
+                        startActivity(intent);
                         finish();
                     }
                     else{
+                        //Giving warning to the user to fill all the details
                         Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
                         snackbar.show();
                     }
