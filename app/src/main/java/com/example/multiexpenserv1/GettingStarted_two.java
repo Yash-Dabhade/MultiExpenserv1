@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -32,10 +33,8 @@ public class GettingStarted_two extends AppCompatActivity {
                 mincome=Montly_Income.getText().toString();
                 cbalance=Current_Balance.getText().toString();
                 eincome=Extra_Income.getText().toString();
+                Toast.makeText(GettingStarted_two.this, mincome+" "+cbalance+" "+eincome, Toast.LENGTH_SHORT).show();
                 if(!(mincome.isEmpty()||cbalance.isEmpty()||eincome.isEmpty())) {
-                    editor.putInt("Monthly_Income",Integer.parseInt(mincome));
-                    editor.putInt("Current_Balance",Integer.parseInt(cbalance));
-                    editor.putInt("Extra_Income", Integer.parseInt(eincome));
                     editor.putString("FirstTimeInstalled", "Yes");
                     editor.apply();
                     startActivity(new Intent(GettingStarted_two.this, Home.class));

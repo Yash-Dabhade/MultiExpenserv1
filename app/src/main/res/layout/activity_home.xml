@@ -103,8 +103,8 @@
 
     <TextView
         android:id="@+id/Welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/lustria"
         android:textColor="#E4E4E1"
@@ -131,17 +131,17 @@
 
     <TextView
         android:id="@+id/Home_Balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="29dp"
         android:fontFamily="@font/baloo_bhai"
         android:textColor="#095757"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="@+id/imageView24"
-        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toEndOf="@+id/imageView25"
         app:layout_constraintTop_toBottomOf="@+id/imageView26"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.237" />
 
     <ImageView
         android:id="@+id/imageView31"

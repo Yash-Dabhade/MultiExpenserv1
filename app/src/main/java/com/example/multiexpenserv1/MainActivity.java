@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -41,11 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     lname = LastName.getText().toString();
                     email = Email.getText().toString();
                     // Checking if the data is not null
+                    Toast.makeText(MainActivity.this, fname+" "+lname, Toast.LENGTH_SHORT).show();
                     if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
-                        editor.putString("First_Name", fname);
-                        editor.putString("Last_Name", lname);
-                        editor.putString("Email", email);
-                        editor.apply();
                         startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
                         finish();
                     }
