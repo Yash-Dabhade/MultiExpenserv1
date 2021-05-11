@@ -2,7 +2,32 @@ package com.example.multiexpenserv1;
 
 public class user {
     private String first_name,last_name,email;
-    private long monthly_income,current_balance,extra_income;
+
+    public String getMonthly_income() {
+        return monthly_income;
+    }
+
+    public void setMonthly_income(String monthly_income) {
+        this.monthly_income = monthly_income;
+    }
+
+    public String getCurrent_balance() {
+        return current_balance;
+    }
+
+    public void setCurrent_balance(String current_balance) {
+        this.current_balance = current_balance;
+    }
+
+    public String getExtra_income() {
+        return extra_income;
+    }
+
+    public void setExtra_income(String extra_income) {
+        this.extra_income = extra_income;
+    }
+
+    private String monthly_income,current_balance,extra_income;
 
     // Adding Getters and Setters
     public String getFirst_name() {
@@ -29,29 +54,7 @@ public class user {
         this.email = email;
     }
 
-    public long getMonthly_income() {
-        return monthly_income;
-    }
 
-    public void setMonthly_income(long monthly_income) {
-        this.monthly_income = monthly_income;
-    }
-
-    public long getCurrent_balance() {
-        return current_balance;
-    }
-
-    public void setCurrent_balance(long current_balance) {
-        this.current_balance = current_balance;
-    }
-
-    public long getExtra_income() {
-        return extra_income;
-    }
-
-    public void setExtra_income(long extra_income) {
-        this.extra_income = extra_income;
-    }
     // End
 
 }

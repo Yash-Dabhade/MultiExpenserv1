@@ -16,6 +16,9 @@ public class GettingStarted_two extends AppCompatActivity {
 
     private EditText Montly_Income,Current_Balance,Extra_Income;
     private ImageView Finish_Button;
+
+    //Declaring database
+    DbHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ public class GettingStarted_two extends AppCompatActivity {
         Extra_Income=findViewById(R.id.Extra_Income);
         Finish_Button=findViewById(R.id.Finish_Button);
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+        db=new DbHandler(this);
         Finish_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,9 +50,13 @@ public class GettingStarted_two extends AppCompatActivity {
                     u.setFirst_name(intent.getStringExtra("MULTIEXPENSER_FIRST_NAME"));
                     u.setLast_name(intent.getStringExtra("MULTIEXPENSER_LAST_NAME"));
                     u.setEmail(intent.getStringExtra("MULTIEXPENSER_EMAIL"));
-                    u.setMonthly_income(Long.parseLong(mincome));
-                    u.setCurrent_balance(Long.parseLong(cbalance));
-                    u.setExtra_income(Long.parseLong(eincome));
+                    u.setMonthly_income(mincome);
+                    u.setCurrent_balance(cbalance);
+                    u.setExtra_income(eincome);
+
+                    //Adding data to the database
+                  db.insertUser(u.getFirst_name(),u.getLast_name(),u.getEmail(),u.getMonthly_income(),u.getCurrent_balance(),u.getExtra_income());
+                  db.close();
                     //Starting home activity
                     startActivity(new Intent(GettingStarted_two.this, Home.class));
                     finish();
