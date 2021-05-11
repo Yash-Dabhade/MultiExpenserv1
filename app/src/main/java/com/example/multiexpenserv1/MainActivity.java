@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -23,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
         //Cheking for Onbard process
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         String FirstTime=sharedPreferences.getString("FirstTimeInstalled","");
+
+
+
         if(FirstTime.equals("Yes")) {
             startActivity(new Intent(MainActivity.this,Home.class));
+            finish();
         }
         else {
             FirstName = findViewById(R.id.First_Name);
@@ -35,27 +40,29 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
+                    Intent intent=new Intent(MainActivity.this, GettingStarted_two.class);
                     String fname, lname, email;
                     fname = FirstName.getText().toString();
                     lname = LastName.getText().toString();
                     email = Email.getText().toString();
+
+                    //Setting data into the intent
+                    intent.putExtra("MULTIEXPENSER_FIRST_NAME",fname);
+                    intent.putExtra("MULTIEXPENSER_LAST_NAME",lname);
+                    intent.putExtra("MULTIEXPENSER_EMAIL",email);
+
                     // Checking if the data is not null
                     if (!(fname.isEmpty() || lname.isEmpty() || email.isEmpty())) {
-                        editor.putString("FirstName", fname);
-                        editor.putString("LastName", lname);
-                        editor.putString("Email", email);
-                        editor.apply();
-                        startActivity(new Intent(MainActivity.this, GettingStarted_two.class));
+                        startActivity(intent);
                         finish();
                     }
                     else{
+                        //Giving warning to the user to fill all the details
                         Snackbar snackbar=Snackbar.make(v,"Please fill all the details !",Snackbar.LENGTH_LONG);
                         snackbar.show();
                     }
                 }
             });
-
-
         }
     }
 }
