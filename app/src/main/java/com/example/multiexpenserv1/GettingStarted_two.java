@@ -18,8 +18,6 @@ public class GettingStarted_two extends AppCompatActivity {
     private EditText Montly_Income,Current_Balance,Extra_Income;
     private ImageView Finish_Button;
 
-    //Declaring database
-    DbHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,17 +38,16 @@ public class GettingStarted_two extends AppCompatActivity {
 
                 //Checking whether data is not null
                 if(!(mincome.isEmpty()||cbalance.isEmpty()||eincome.isEmpty())) {
+                    //Flag that app has been installed now for the first time
                     editor.putString("FirstTimeInstalled", "Yes");
+                    // Saving the user details into the shared preferences
                     editor.putString("Monthly_Income",mincome);
                     editor.putString("Current_Balance",cbalance);
                     editor.putString("Extra_Income",eincome);
                     editor.apply();
-                    //Getting intent
-                    Intent intent=getIntent();
 
                     //Starting home activity
                     startActivity(new Intent(GettingStarted_two.this, Home.class));
-                    overridePendingTransition(R.anim.slide_out_left,R.anim.slide_in_right);
                     finish();
                 }
                 else {
