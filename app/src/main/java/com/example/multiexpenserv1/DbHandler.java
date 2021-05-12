@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class DbHandler extends SQLiteOpenHelper {
+public class  DbHandler extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "multiexpenser_db";
     public static final String FIRST_NAME = "first_name";
