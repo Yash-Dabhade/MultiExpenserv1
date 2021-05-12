@@ -18,7 +18,7 @@ public class Home extends AppCompatActivity {
     private TextView name,balance;
     private  String fname;
     private String cbalance;
-    private ImageView share;
+    private ImageView share,newexpense;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,7 @@ public class Home extends AppCompatActivity {
         name=findViewById(R.id.Welcome);
         balance=findViewById(R.id.Home_Balance);
         share=findViewById(R.id.share);
+        newexpense=findViewById(R.id.newexpense_button);
         //Getting the user data from the sharedPreferences
         fname=sharedPreferences.getString("First_Name","");
         cbalance=sharedPreferences.getString("Current_Balance","");
@@ -48,5 +49,14 @@ public class Home extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "choose one"));
             }
         });
+
+        //New expense activity
+        newexpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,new_expense_in.class));
+            }
+        });
+
     }
 }
