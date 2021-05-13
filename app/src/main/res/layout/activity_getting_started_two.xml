@@ -42,6 +42,7 @@
         android:id="@+id/Monthly_Income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@null"
         android:ems="10"
         android:hint="Monthly income"
         android:inputType="numberSigned"
@@ -54,6 +55,7 @@
         android:id="@+id/Current_Balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@null"
         android:ems="10"
         android:hint="Current Balance"
         android:inputType="numberSigned"
@@ -66,6 +68,7 @@
         android:id="@+id/Extra_Income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@null"
         android:ems="10"
         android:hint="Extra Income"
         android:inputType="numberSigned"
@@ -92,8 +95,10 @@
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/wallet" />
 
     <ImageView

@@ -4,10 +4,18 @@ import java.util.Date;
 
 public class expense {
     private String Title,amount,description;
-    private String day,month,year,category;
+    private String day,month,year;
     private int ID;
 
-    public expense(int ID,String title, String amount, String day, String month, String year, String category, String description) {
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public expense(String title, String amount, String day, String month, String year, String description) {
         Title = title;
         this.amount = amount;
         this.description = description;
@@ -15,7 +23,6 @@ public class expense {
         this.month = month;
         this.year = year;
         this.ID=ID;
-        this.category = category;
     }
 
     public String getTitle() {
@@ -66,11 +73,4 @@ public class expense {
         this.year = year;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }

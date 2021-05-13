@@ -5,13 +5,13 @@ public class balance {
     private String day,month,year;
     private int ID;
 
-    public balance(int ID,String amount, String day, String month, String year, String description) {
+    public balance(String amount, String day, String month, String year, String description) {
         this.amount = amount;
         this.description = description;
         this.day = day;
         this.month = month;
         this.year = year;
-        this.ID=ID;
+
     }
 
     public int getID() {
