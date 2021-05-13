@@ -66,7 +66,7 @@ public class new_expense_in extends AppCompatActivity {
                         db.close();
                     if (isSaved) {
                         Toast.makeText(new_expense_in.this, "Data Saved successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(new_expense_in.this, Home.class));
+                        startActivity(new Intent(new_expense_in.this,Success.class));
                         finish();
                     }
                     else {

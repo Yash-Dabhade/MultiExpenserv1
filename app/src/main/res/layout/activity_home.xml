@@ -282,18 +282,6 @@
         app:srcCompat="@drawable/info" />
 
     <ImageView
-        android:id="@+id/imageView45"
-        android:layout_width="68dp"
-        android:layout_height="13dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView32"
-        app:layout_constraintEnd_toEndOf="@+id/imageView32"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/imageView32"
-        app:layout_constraintTop_toBottomOf="@+id/imageView38"
-        app:layout_constraintVertical_bias="0.259"
-        app:srcCompat="@drawable/balance" />
-
-    <ImageView
         android:id="@+id/imageView46"
         android:layout_width="wrap_content"
         android:layout_height="14dp"
@@ -353,5 +341,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView37"
         app:layout_constraintVertical_bias="0.259"
         app:srcCompat="@drawable/new_expense_black" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="58dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+        app:layout_constraintEnd_toEndOf="@+id/imageView32"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="@+id/imageView32"
+        app:layout_constraintTop_toBottomOf="@+id/imageView38"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/balance_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

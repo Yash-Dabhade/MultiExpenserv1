@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.multiexpenserv1">
+
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="100" />
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -18,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".new_expense_in"></activity>
+        <activity android:name=".Success"></activity>
+        <activity android:name=".new_expense_in" />
         <activity
             android:name=".GettingStarted_two"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
