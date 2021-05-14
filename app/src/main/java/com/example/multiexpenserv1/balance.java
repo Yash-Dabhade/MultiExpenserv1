@@ -1,16 +1,25 @@
 package com.example.multiexpenserv1;
 
 public class balance {
-    private String amount,description;
+    private String title,amount;
     private String day,month,year;
     private int ID;
 
-    public balance(String amount, String day, String month, String year, String description) {
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public balance(String title, String amount, String day, String month, String year) {
+
         this.amount = amount;
-        this.description = description;
         this.day = day;
         this.month = month;
         this.year = year;
+        this.title=title;
 
     }
 
@@ -28,14 +37,6 @@ public class balance {
 
     public void setAmount(String amount) {
         this.amount = amount;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getDay() {

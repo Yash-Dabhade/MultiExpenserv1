@@ -37,13 +37,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         // Creating Expenses table structure
-        String CreateTableExpenseStatement="CREATE TABLE EXPENSES(TITLE TEXT PRIMARY KEY,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT, DESCRIPTION TEXT);";
+        String CreateTableExpenseStatement="CREATE TABLE EXPENSES(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT, DESCRIPTION TEXT);";
 
         //For executing the sql statement
         db.execSQL(CreateTableExpenseStatement);
 
         //Creating  Balance table structure;
-       String CreateTableBalanceStatement= "CREATE TABLE BALANCE(AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT, DESCRIPTION TEXT);";
+       String CreateTableBalanceStatement= "CREATE TABLE BALANCE(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT);";
         //For executing the sql statement
         db.execSQL(CreateTableBalanceStatement);
     }
@@ -78,11 +78,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         ContentValues cv=new ContentValues();
 
         // Putting content values with corresponding to the column names
+       cv.put(TITLE,obj.getTitle());
         cv.put(AMOUNT,obj.getAmount());
         cv.put(DAY,obj.getDay());
         cv.put(MONTH,obj.getMonth());
         cv.put(YEAR,obj.getYear());
-        cv.put(DESCRIPTION,obj.getDescription());
+
 
         //Inserting values into the table
         long insert=db.insert(BALANCE_TABLE_NAME,null,cv);
@@ -136,17 +137,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             do {
 //                taking data from columns
 
-                String Amount = cursor.getString(0);
-                String Day = cursor.getString(1);
-                String Month = cursor.getString(2);
-                String Year = cursor.getString(3);
-                String Description = cursor.getString(4);
+                String Title=cursor.getString(0);
+                String Amount = cursor.getString(1);
+                String Day = cursor.getString(2);
+                String Month = cursor.getString(3);
+                String Year = cursor.getString(4);
+
 //                 create object using constructor
-                balance obj = new balance(Amount, Day, Month, Year,  Description);
+                balance obj = new balance(Title,Amount, Day, Month, Year);
                 returnList.add(obj);
             } while (cursor.moveToNext());
         } else {
-            balance obj = new balance("-111","-1","-1","-1","Some error occured");
+            balance obj = new balance("Some error occured","-111","-1","-1","-1");
             returnList.add(obj);
         }
         cursor.close();
