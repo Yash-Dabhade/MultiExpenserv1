@@ -17,6 +17,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
+    public static final String GOAL_TABLE_NAME = "GOAL";
     public static boolean UniqueConstraintError=false;
     public static final String EXPENSES_TABLE_NAME = "EXPENSES";
     public static final String TITLE = "TITLE";
@@ -24,7 +25,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String DAY = "DAY";
     public static final String MONTH = "MONTH";
     public static final String YEAR = "YEAR";
-    public static final String CATEGORY = "CATEGORY";
+    public static final String TYPE = "TYPE";
     public static final String DESCRIPTION = "DESCRIPTION";
     public static final String DATABASE_NAME = "multiexpenserdb";
     public static final String BALANCE_TABLE_NAME = "BALANCE";
@@ -38,7 +39,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         // Creating Expenses table structure
         String CreateTableExpenseStatement="CREATE TABLE EXPENSES(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT, DESCRIPTION TEXT);";
-
         //For executing the sql statement
         db.execSQL(CreateTableExpenseStatement);
 
@@ -46,6 +46,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
        String CreateTableBalanceStatement= "CREATE TABLE BALANCE(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT);";
         //For executing the sql statement
         db.execSQL(CreateTableBalanceStatement);
+
+        //Creating Goal Table structure
+        String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT);";
+        //For executing the sql statement
+        db.execSQL(CreateTableGoalStatement);
     }
 
     @Override
@@ -87,6 +92,24 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         //Inserting values into the table
         long insert=db.insert(BALANCE_TABLE_NAME,null,cv);
+        return insert != -1;
+    }
+    // Write funtion for new Goal
+    public boolean AddGoalToDB(goal obj){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+
+        // Putting content values with corresponding to the column names
+        cv.put(TITLE,obj.getTitle());
+        cv.put(AMOUNT,obj.getAmount());
+        cv.put(TYPE,obj.getType());
+        cv.put(DAY,obj.getDay());
+        cv.put(MONTH,obj.getMonth());
+        cv.put(YEAR,obj.getYear());
+
+
+        //Inserting values into the table
+        long insert=db.insert(GOAL_TABLE_NAME,null,cv);
         return insert != -1;
     }
 
@@ -149,6 +172,39 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         } else {
             balance obj = new balance("Some error occured","-111","-1","-1","-1");
+            returnList.add(obj);
+        }
+        cursor.close();
+        db.close();
+        return returnList;
+    }
+    // To get the data from the Goals
+    public  List<goal> getAllGoals() {
+        //Declaring list to return
+        List<goal> returnList = new ArrayList<>();
+        //Query to get data
+        String query = "SELECT * FROM " + GOAL_TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        //Check if the cursor has successfully fetched the results
+        if (cursor.moveToFirst()) {
+//            // loop through the cursor and create a new class objects. put them into the return list
+            do {
+//                taking data from columns
+
+                String Title=cursor.getString(0);
+                String Type=cursor.getString(1);
+                String Amount = cursor.getString(2);
+                String Day = cursor.getString(3);
+                String Month = cursor.getString(4);
+                String Year = cursor.getString(5);
+
+//                 create object using constructor
+                goal obj = new goal(Title,Type,Amount, Day, Month, Year);
+                returnList.add(obj);
+            } while (cursor.moveToNext());
+        } else {
+            goal obj = new goal("Some error occured","-111","null","-1","-1","-111");
             returnList.add(obj);
         }
         cursor.close();

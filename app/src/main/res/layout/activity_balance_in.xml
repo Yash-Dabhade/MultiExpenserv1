@@ -253,7 +253,7 @@
         app:layout_constraintEnd_toEndOf="@+id/back_btn_balance"
         app:layout_constraintStart_toStartOf="@+id/back_btn_balance"
         app:layout_constraintTop_toTopOf="@+id/back_btn_balance"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back_txt" />
 
     <ImageView
         android:id="@+id/imageView69"
