@@ -3,6 +3,7 @@ package com.example.multiexpenserv1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -46,7 +47,7 @@ public class new_expense_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String title,amount,day,month,year,description;
-
+                boolean isBalanceConsistent=true;
                 //Storing data from the edit text into the strings
                 title= Title.getText().toString();
                 amount=Amount.getText().toString();
@@ -62,16 +63,40 @@ public class new_expense_in extends AppCompatActivity {
                     //Creating database object
                     DataBaseHelper db = new DataBaseHelper(new_expense_in.this);
                     boolean isSaved=false;
+
+                    // Adding Shared Preferences
+                    SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    String Orignal_Balance=sharedPreferences.getString("Current_Balance","");
+
+                    //Subtracting Balance
+                    int Balance_Integer = Integer.parseInt(Orignal_Balance);
+                    String Amount_String = Amount.getText().toString();
+                    if (Amount_String.isEmpty()) {
+                        Snackbar snackbar = Snackbar.make(v, "Please Fill the amount details !!!", Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                    }
+                    else {
+                        int amount_t = Integer.parseInt(Amount_String);
+                        if(Balance_Integer>=amount_t) {
+                            Balance_Integer -= amount_t;
+                            editor.putString("Current_Balance", Integer.toString(Balance_Integer));
+                        }
+                        else{
+                            Toast.makeText(new_expense_in.this, "Insuffient Balance !", Toast.LENGTH_LONG).show();
+                            isBalanceConsistent=false;
+                        }
+                    }
                         // Calling funtion to add the expense data
                         isSaved = db.addExpenseToDB(obj);
                         db.close();
-                    if (isSaved) {
-                        Toast.makeText(new_expense_in.this, "Data Saved successfully", Toast.LENGTH_SHORT).show();
+                    if (isSaved && isBalanceConsistent) {
+                        editor.apply();
                         startActivity(new Intent(new_expense_in.this,Success.class));
                         finish();
                     }
                     else {
-                        Snackbar snackbar=Snackbar.make(v,"Title already saved, choose different title !",Snackbar.LENGTH_LONG);
+                        Snackbar snackbar=Snackbar.make(v,"Please Fill The Detaills Properly !",Snackbar.LENGTH_LONG);
                         snackbar.show();
                     }
                 }

@@ -115,7 +115,6 @@ public class Balance_in extends AppCompatActivity {
                         isSaved = db.addBalanceDetailsToDB(obj);
                         db.close();
                         if (isSaved&&isBalanceConsistent) {
-                            Toast.makeText(Balance_in.this, "Data Saved successfully", Toast.LENGTH_SHORT).show();
                             editor.apply();
                             startActivity(new Intent(Balance_in.this, Success.class));
                             finish();
