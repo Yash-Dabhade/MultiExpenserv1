@@ -16,7 +16,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class new_expense_in extends AppCompatActivity {
 
     private EditText Title,Amount,Day,Month,Year,Description;
-    private ImageView save,back;
+    private ImageView save,back,show_expenses;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +29,18 @@ public class new_expense_in extends AppCompatActivity {
         Month=findViewById(R.id.Month);
         Year=findViewById(R.id.Year);
         Description=findViewById(R.id.Description);
+        show_expenses=findViewById(R.id.show_expenses_btn);
         save=findViewById(R.id.save_btn);
         back=findViewById(R.id.back_btn);
+
+        //Show Expenses on click listnere
+        show_expenses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(new_expense_in.this,Show_Expenses.class));
+                finish();
+            }
+        });
 
         // On click listner for back button
         back.setOnClickListener(new View.OnClickListener() {

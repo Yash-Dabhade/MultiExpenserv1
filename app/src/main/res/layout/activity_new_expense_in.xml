@@ -291,7 +291,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/show_expenses_btn"
         android:layout_width="51dp"
         android:layout_height="49dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView22"
