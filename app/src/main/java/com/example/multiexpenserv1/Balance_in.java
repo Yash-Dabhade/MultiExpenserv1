@@ -17,7 +17,7 @@ public class Balance_in extends AppCompatActivity {
 
     private TextView Current_Balance_Balance_in;
     private EditText Title,Amount,Day,Month,Year;
-    private ImageView Add,Minus,Save,Back;
+    private ImageView Add,Minus,Save,Back,Transactions;
     private boolean isAddOperationDone=false,isMinusOperationDone=false;
 
     @Override
@@ -35,7 +35,7 @@ public class Balance_in extends AppCompatActivity {
         Minus=findViewById(R.id.balance_minus);
         Save=findViewById(R.id.save_button_balance);
         Back=findViewById(R.id.back_btn_balance);
-
+        Transactions=findViewById(R.id.transactions);
         //Setting the orignal balance from the shared preferences
         String Orignal_Balance;
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
@@ -43,6 +43,13 @@ public class Balance_in extends AppCompatActivity {
         Orignal_Balance=sharedPreferences.getString("Current_Balance","");
         Current_Balance_Balance_in.setText("RS "+Orignal_Balance);
 
+        //Setting click listner for showing transactions
+        Transactions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Balance_in.this,show_transactions.class));
+            }
+        });
         // getting text from the elements when the save button is clicked and setting on click listner
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,10 +118,15 @@ public class Balance_in extends AppCompatActivity {
                         //Creating database object
                         DataBaseHelper db = new DataBaseHelper(Balance_in.this);
                         boolean isSaved = false;
+                        if(isAddOperationDone)
+                            obj.setStatus("Deposit");
+                        else if(isMinusOperationDone)
+                            obj.setStatus("Withdraw");
                         // Calling funtion to add the expense data
                         isSaved = db.addBalanceDetailsToDB(obj);
                         db.close();
                         if (isSaved&&isBalanceConsistent) {
+
                             editor.apply();
                             startActivity(new Intent(Balance_in.this, Success.class));
                             finish();

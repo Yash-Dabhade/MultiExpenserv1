@@ -122,7 +122,7 @@
         app:srcCompat="@drawable/balance" />
 
     <ImageView
-        android:id="@+id/imageView56"
+        android:id="@+id/transactions"
         android:layout_width="43dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView33"

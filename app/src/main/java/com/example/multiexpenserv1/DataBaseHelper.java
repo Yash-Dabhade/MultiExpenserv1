@@ -18,6 +18,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final String GOAL_TABLE_NAME = "GOAL";
+    public static final String ISCREDITED = "ISCREDITED";
+    public static final String STATUS = "STATUS";
     public static boolean UniqueConstraintError=false;
     public static final String EXPENSES_TABLE_NAME = "EXPENSES";
     public static final String TITLE = "TITLE";
@@ -43,7 +45,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTableExpenseStatement);
 
         //Creating  Balance table structure;
-       String CreateTableBalanceStatement= "CREATE TABLE BALANCE(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT);";
+       String CreateTableBalanceStatement= "CREATE TABLE BALANCE(TITLE TEXT ,AMOUNT TEXT, DAY TEXT, MONTH TEXT, YEAR TEXT ,STATUS TEXT);";
         //For executing the sql statement
         db.execSQL(CreateTableBalanceStatement);
 
@@ -88,8 +90,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(DAY,obj.getDay());
         cv.put(MONTH,obj.getMonth());
         cv.put(YEAR,obj.getYear());
-
-
+       cv.put(STATUS,obj.getStatus());
         //Inserting values into the table
         long insert=db.insert(BALANCE_TABLE_NAME,null,cv);
         return insert != -1;
@@ -165,13 +166,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 String Day = cursor.getString(2);
                 String Month = cursor.getString(3);
                 String Year = cursor.getString(4);
+                String Status=cursor.getString(5);
 
 //                 create object using constructor
                 balance obj = new balance(Title,Amount, Day, Month, Year);
+                obj.setStatus(Status);
                 returnList.add(obj);
             } while (cursor.moveToNext());
         } else {
             balance obj = new balance("Some error occured","-111","-1","-1","-1");
+            obj.setStatus("None");
             returnList.add(obj);
         }
         cursor.close();

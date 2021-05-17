@@ -38,7 +38,6 @@ public class new_expense_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(new_expense_in.this,Show_Expenses.class));
-                finish();
             }
         });
 
