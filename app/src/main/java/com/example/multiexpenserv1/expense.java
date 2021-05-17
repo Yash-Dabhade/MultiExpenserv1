@@ -5,15 +5,6 @@ import java.util.Date;
 public class expense {
     private String Title,amount,description;
     private String day,month,year;
-    private int ID;
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public expense(String title, String amount, String day, String month, String year, String description) {
         Title = title;
@@ -22,7 +13,6 @@ public class expense {
         this.day = day;
         this.month = month;
         this.year = year;
-        this.ID=ID;
     }
 
     public String getTitle() {
@@ -34,7 +24,10 @@ public class expense {
     }
 
     public String getAmount() {
-        return amount;
+        return (amount);
+    }
+    public  String getAmountWithRS(){
+        return "RS "+amount;
     }
 
     public void setAmount(String amount) {
@@ -71,6 +64,10 @@ public class expense {
 
     public void setYear(String year) {
         this.year = year;
+    }
+
+    public String getDate(){
+        return (getDay()+"/"+getMonth()+"/"+getYear());
     }
 
 }
