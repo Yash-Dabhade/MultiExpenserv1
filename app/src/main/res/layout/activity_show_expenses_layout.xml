@@ -17,10 +17,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.301" />
 
     <TextView
         android:id="@+id/Amount_Show_Expenses"
@@ -35,7 +35,7 @@
         android:textColor="#EA1717"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title_Show_Expenses"
         app:layout_constraintVertical_bias="0.0" />
