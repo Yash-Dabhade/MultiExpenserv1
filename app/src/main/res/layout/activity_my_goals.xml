@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".My_Goals">
 
     <ImageView
@@ -104,4 +105,23 @@
         app:layout_constraintStart_toStartOf="@+id/imageView67"
         app:layout_constraintTop_toBottomOf="@+id/imageView72"
         app:layout_constraintVertical_bias="0.354" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/My_Goals_Recycler_View"
+        android:layout_width="0dp"
+        android:layout_height="369dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="391dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/My_Goals_Recycler_View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
 </androidx.constraintlayout.widget.ConstraintLayout>

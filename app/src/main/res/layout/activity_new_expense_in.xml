@@ -21,7 +21,7 @@
         android:id="@+id/imageView20"
         android:layout_width="36dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,10 +35,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.421"
         app:srcCompat="@drawable/new_expense_wite" />
 
     <ImageView
@@ -292,14 +292,14 @@
 
     <ImageView
         android:id="@+id/show_expenses_btn"
-        android:layout_width="51dp"
-        android:layout_height="49dp"
+        android:layout_width="53dp"
+        android:layout_height="46dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.742"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842"
+        app:layout_constraintVertical_bias="0.888"
         app:srcCompat="@drawable/clock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

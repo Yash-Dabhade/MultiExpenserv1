@@ -18,9 +18,7 @@ import static android.content.Context.MODE_PRIVATE;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final String GOAL_TABLE_NAME = "GOAL";
-    public static final String ISCREDITED = "ISCREDITED";
     public static final String STATUS = "STATUS";
-    public static boolean UniqueConstraintError=false;
     public static final String EXPENSES_TABLE_NAME = "EXPENSES";
     public static final String TITLE = "TITLE";
     public static final String AMOUNT = "AMOUNT";
@@ -207,10 +205,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 goal obj = new goal(Title,Type,Amount, Day, Month, Year);
                 returnList.add(obj);
             } while (cursor.moveToNext());
-        } else {
-            goal obj = new goal("Some error occured","-111","null","-1","-1","-111");
-            returnList.add(obj);
         }
+//        else {
+////            goal obj = new goal("Some error occured","-111","null","-1","-1","-111");
+////            returnList.add(obj);
+//        }
         cursor.close();
         db.close();
         return returnList;
