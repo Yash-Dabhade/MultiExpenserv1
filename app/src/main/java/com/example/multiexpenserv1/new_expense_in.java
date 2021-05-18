@@ -67,10 +67,10 @@ public class new_expense_in extends AppCompatActivity {
 
                 //Checking whether the data fields are filled
                 if(!(title.isEmpty()||amount.isEmpty()||day.isEmpty()||month.isEmpty()||year.isEmpty()||description.isEmpty())) {
-                    //Creating object of expense and saving the data into it
-                    expense obj = new expense(title, amount, day, month, year, description);
-                    //Creating database object
-                    DataBaseHelper db = new DataBaseHelper(new_expense_in.this);
+
+                    //Declaring varibales
+                    expense obj;
+                    DataBaseHelper db;
                     boolean isSaved=false;
 
                     // Adding Shared Preferences
@@ -90,6 +90,13 @@ public class new_expense_in extends AppCompatActivity {
                         if(Balance_Integer>=amount_t) {
                             Balance_Integer -= amount_t;
                             editor.putString("Current_Balance", Integer.toString(Balance_Integer));
+                            //Creating object of expense and saving the data into it
+                             obj = new expense(title, amount, day, month, year, description);
+                            //Creating database object
+                             db = new DataBaseHelper(new_expense_in.this);
+                            isSaved = db.addExpenseToDB(obj);
+                            db.close();
+
                         }
                         else{
                             Toast.makeText(new_expense_in.this, "Insuffient Balance !", Toast.LENGTH_LONG).show();
@@ -97,8 +104,7 @@ public class new_expense_in extends AppCompatActivity {
                         }
                     }
                         // Calling funtion to add the expense data
-                        isSaved = db.addExpenseToDB(obj);
-                        db.close();
+
                     if (isSaved && isBalanceConsistent) {
                         editor.apply();
                         startActivity(new Intent(new_expense_in.this,Success.class));

@@ -57,6 +57,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this,new_expense_in.class));
+                finish();
             }
         });
 
@@ -65,6 +66,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, com.example.multiexpenserv1.Balance_in.class));
+                finish();
             }
         });
 
@@ -73,6 +75,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this,New_Goal.class));
+                finish();
             }
 
         });

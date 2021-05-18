@@ -7,12 +7,14 @@
 
     <TextView
         android:id="@+id/show_transactions_title"
-        android:layout_width="217dp"
-        android:layout_height="24dp"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/baloo_bhai"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +25,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/show_transactions_title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877" />
@@ -37,7 +39,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/cantora_one"
-        android:textColor="#30E338"
+        android:textColor="#028508"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/show_transactions_date"
@@ -54,7 +56,7 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/cantora_one"
         android:textColor="#EA0E0E"
-        android:textSize="13sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
