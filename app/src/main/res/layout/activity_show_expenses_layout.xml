@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/Title_Show_Expenses"
-        android:layout_width="284dp"
-        android:layout_height="32dp"
+        android:layout_width="279dp"
+        android:layout_height="39dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/cantora_one"

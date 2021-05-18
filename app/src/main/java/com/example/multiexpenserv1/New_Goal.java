@@ -81,5 +81,13 @@ public class New_Goal extends AppCompatActivity {
                 }
             }
         });
+
+        //Setting oncllick listner for my goals
+        myGoals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(New_Goal.this,My_Goals.class));
+            }
+        });
     }
 }

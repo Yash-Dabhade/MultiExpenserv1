@@ -12,8 +12,17 @@ public class goal {
         Year = year;
     }
 
+
+    public  String getAmountWithRS(){
+        return "RS "+Amount;
+    }
+
     public String getTitle() {
         return Title;
+    }
+
+    public String getDate(){
+        return (getDay()+"/"+getMonth()+"/"+getYear());
     }
 
     public void setTitle(String title) {

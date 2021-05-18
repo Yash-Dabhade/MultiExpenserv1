@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".My_Goals">
+
+    <ImageView
+        android:id="@+id/imageView58"
+        android:layout_width="524dp"
+        android:layout_height="375dp"
+        android:layout_marginBottom="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/goals_background" />
+
+    <ImageView
+        android:id="@+id/imageView67"
+        android:layout_width="333dp"
+        android:layout_height="245dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        app:srcCompat="@drawable/goals_topholder" />
+
+    <ImageView
+        android:id="@+id/imageView70"
+        android:layout_width="88dp"
+        android:layout_height="84dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="@+id/imageView67"
+        app:layout_constraintTop_toTopOf="@+id/imageView67"
+        app:layout_constraintVertical_bias="0.483"
+        app:srcCompat="@drawable/goal" />
+
+    <ImageView
+        android:id="@+id/imageView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="@+id/imageView67"
+        app:layout_constraintVertical_bias="0.242"
+        app:srcCompat="@drawable/goals_achived" />
+
+    <TextView
+        android:id="@+id/Goals_Achieved_Goals"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="53"
+        android:textColor="#7EE483"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toBottomOf="@+id/imageView71" />
+
+    <ImageView
+        android:id="@+id/imageView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toBottomOf="@+id/imageView71"
+        app:layout_constraintVertical_bias="0.263"
+        app:srcCompat="@drawable/seperator" />
+
+    <ImageView
+        android:id="@+id/imageView76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="@+id/imageView67"
+        app:layout_constraintTop_toBottomOf="@+id/imageView72"
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@drawable/goals_pending" />
+
+    <TextView
+        android:id="@+id/Goals_Pending_Goals"
+        android:layout_width="30dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="20"
+        android:textColor="#E65151"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="@+id/imageView67"
+        app:layout_constraintTop_toBottomOf="@+id/imageView72"
+        app:layout_constraintVertical_bias="0.354" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@ public class expense {
     public String getAmount() {
         return (amount);
     }
+
     public  String getAmountWithRS(){
         return "RS "+amount;
     }
