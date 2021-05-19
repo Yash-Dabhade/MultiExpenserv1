@@ -33,9 +33,7 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
     public void onBindViewHolder(@NonNull MyGoals_Adapter.ViewHolder holder, int position) {
         holder.Title.setText(goalsList.get(position).getTitle());
         holder.Amount.setText(goalsList.get(position).getAmountWithRS());
-        holder.Type.setText(goalsList.get(position).getType());
         holder.Date.setText(goalsList.get(position).getDate());
-        holder.Status.setText("Pending");
     }
 
     //to get count
@@ -45,14 +43,12 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        final private  TextView Title,Amount,Date,Type,Status;
+        final private  TextView Title,Amount,Date;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             Title=itemView.findViewById(R.id.Title_My_Goals);
             Amount=itemView.findViewById(R.id.Amount_My_Goals);
             Date=itemView.findViewById(R.id.Date_My_Goals);
-            Type=itemView.findViewById(R.id.My_Goals_Type);
-            Status=itemView.findViewById(R.id.Status_My_Goals);
 
 
         }

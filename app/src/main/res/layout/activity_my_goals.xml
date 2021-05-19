@@ -7,113 +7,22 @@
     android:background="#FFFFFF"
     tools:context=".My_Goals">
 
-    <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="524dp"
-        android:layout_height="375dp"
-        android:layout_marginBottom="500dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/goals_background" />
-
-    <ImageView
-        android:id="@+id/imageView67"
-        android:layout_width="333dp"
-        android:layout_height="245dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
-        app:srcCompat="@drawable/goals_topholder" />
-
-    <ImageView
-        android:id="@+id/imageView70"
-        android:layout_width="88dp"
-        android:layout_height="84dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="@+id/imageView67"
-        app:layout_constraintTop_toTopOf="@+id/imageView67"
-        app:layout_constraintVertical_bias="0.483"
-        app:srcCompat="@drawable/goal" />
-
-    <ImageView
-        android:id="@+id/imageView71"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toEndOf="@+id/imageView70"
-        app:layout_constraintTop_toTopOf="@+id/imageView67"
-        app:layout_constraintVertical_bias="0.242"
-        app:srcCompat="@drawable/goals_achived" />
-
-    <TextView
-        android:id="@+id/Goals_Achieved_Goals"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="53"
-        android:textColor="#7EE483"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toEndOf="@+id/imageView70"
-        app:layout_constraintTop_toBottomOf="@+id/imageView71" />
-
-    <ImageView
-        android:id="@+id/imageView72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toEndOf="@+id/imageView70"
-        app:layout_constraintTop_toBottomOf="@+id/imageView71"
-        app:layout_constraintVertical_bias="0.263"
-        app:srcCompat="@drawable/seperator" />
-
-    <ImageView
-        android:id="@+id/imageView76"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toStartOf="@+id/imageView67"
-        app:layout_constraintTop_toBottomOf="@+id/imageView72"
-        app:layout_constraintVertical_bias="0.178"
-        app:srcCompat="@drawable/goals_pending" />
-
-    <TextView
-        android:id="@+id/Goals_Pending_Goals"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="20"
-        android:textColor="#E65151"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
-        app:layout_constraintEnd_toEndOf="@+id/imageView67"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="@+id/imageView67"
-        app:layout_constraintTop_toBottomOf="@+id/imageView72"
-        app:layout_constraintVertical_bias="0.354" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/My_Goals_Recycler_View"
-        android:layout_width="0dp"
-        android:layout_height="369dp"
+        android:layout_width="352dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.703" />
 
     <View
         android:id="@+id/divider5"
@@ -123,5 +32,44 @@
         app:layout_constraintBottom_toTopOf="@+id/My_Goals_Recycler_View"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="411dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="480dp"
+        android:background="#D50000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView56"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:srcCompat="@drawable/mygoals" />
+
+    <TextView
+        android:id="@+id/My_Goals_Title"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="MyGoals"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toEndOf="@+id/imageView56"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536" />
 </androidx.constraintlayout.widget.ConstraintLayout>

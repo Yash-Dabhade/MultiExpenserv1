@@ -136,9 +136,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 expense obj = new expense(Title, Amount, Day, Month, Year, Description);
                 returnList.add(obj);
             } while (cursor.moveToNext());
-        } else {
-            expense obj = new expense("No title", "-1-1-1", "-1", "-1", "-1",  "Some error occured");
-            returnList.add(obj);
         }
         cursor.close();
         db.close();
@@ -171,10 +168,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 obj.setStatus(Status);
                 returnList.add(obj);
             } while (cursor.moveToNext());
-        } else {
-            balance obj = new balance("Some error occured","-111","-1","-1","-1");
-            obj.setStatus("None");
-            returnList.add(obj);
         }
         cursor.close();
         db.close();
@@ -206,10 +199,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 returnList.add(obj);
             } while (cursor.moveToNext());
         }
-//        else {
-////            goal obj = new goal("Some error occured","-111","null","-1","-1","-111");
-////            returnList.add(obj);
-//        }
         cursor.close();
         db.close();
         return returnList;

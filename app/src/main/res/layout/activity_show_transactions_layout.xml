@@ -22,6 +22,7 @@
         android:id="@+id/show_transactions_date"
         android:layout_width="89dp"
         android:layout_height="16dp"
+        android:textColor="#6A677A"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

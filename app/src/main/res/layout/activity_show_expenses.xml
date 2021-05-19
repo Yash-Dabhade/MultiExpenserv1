@@ -22,7 +22,7 @@
         android:id="@+id/view"
         android:layout_width="397dp"
         android:layout_height="86dp"
-        android:background="#0B4EB3"
+        android:background="#00C853"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

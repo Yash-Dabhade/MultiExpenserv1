@@ -3,85 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFFFFF">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/Title_My_Goals"
-        android:layout_width="334dp"
-        android:layout_height="58dp"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/baloo_bhai"
-        android:text="TextView"
-        android:textColor="#1E1B1B"
-        android:textSize="20sp"
+        android:textColor="#00B8D4"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Date_My_Goals"
-        android:layout_width="83dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="84dp"
-        android:fontFamily="sans-serif"
-        android:text="TextView"
-        android:textColor="#E91E63"
-        android:textSize="14sp"
+        android:layout_width="89dp"
+        android:layout_height="16dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Title_My_Goals"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877" />
+
 
     <TextView
         android:id="@+id/Amount_My_Goals"
-        android:layout_width="146dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="84dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="TextView"
-        android:textColor="#03A9F4"
+        android:layout_width="162dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cantora_one"
+        android:textColor="#00C853"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toEndOf="@+id/Date_My_Goals"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/My_Goals_Type"
-        android:layout_width="330dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="serif"
-        android:text="TextView"
-        android:textColor="#FF9800"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Status_My_Goals"
-        android:layout_width="86dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="88dp"
-        android:text="TextView"
-        android:textColor="#28AC2D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toEndOf="@+id/Amount_My_Goals"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
 
     <View
-        android:id="@+id/divider6"
-        android:layout_width="386dp"
+        android:id="@+id/divider10"
+        android:layout_width="391dp"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="72dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/My_Goals_Type" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

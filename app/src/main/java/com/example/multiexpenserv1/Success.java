@@ -19,6 +19,6 @@ public class Success extends AppCompatActivity {
                         finish();
                     }
                 },
-                2000);
+                1250);
     }
 }
