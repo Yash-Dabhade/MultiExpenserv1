@@ -22,5 +22,6 @@ public class Show_Expenses extends AppCompatActivity {
         List<expense> expenseList=db.getAllExpenses();
         ShowExpensesAdapter adapter=new ShowExpensesAdapter(expenseList,this);
         recyclerView.setAdapter(adapter);
+
     }
 }
