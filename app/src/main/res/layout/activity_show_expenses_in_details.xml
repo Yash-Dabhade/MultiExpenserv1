@@ -4,19 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1F1F1"
+    android:background="#053E57"
     tools:context=".Show_Expenses_In_Details">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="391dp"
+        android:layout_height="93dp"
+        android:background="#00B0FF"
+        app:layout_constraintBottom_toBottomOf="@+id/divider6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Title_Show_Expenses_in_Detail"
-        android:layout_width="276dp"
-        android:layout_height="65dp"
+        android:layout_width="328dp"
+        android:layout_height="68dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/baloo_bhai"
+        android:fontFamily="@font/righteous"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="#0091EA"
-        android:textSize="18sp"
+        android:textColor="#F4F6F8"
+        android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@+id/divider6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -36,32 +46,64 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.133" />
 
+    <View
+        android:id="@+id/view5"
+        android:layout_width="392dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:background="#1E739A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Date_show_Expenses_in_details"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/Description_show_expenses_in_detail"
+        android:layout_width="322dp"
+        android:layout_height="328dp"
+        android:background="#053E57"
+        android:fontFamily="@font/artifika"
+        android:paddingLeft="15dp"
+        android:paddingTop="24dp"
+        android:text="TextView"
+        android:textColor="#ECE4E7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Date_show_Expenses_in_details"
+        app:layout_constraintVertical_bias="0.507" />
+
     <TextView
         android:id="@+id/Amount_Desc_show_expennse_in_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cantora_one"
+        android:fontFamily="@font/bree_serif"
         android:text="Amount Spend :"
         android:textColor="#00C853"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Amount_show_expsense_in_details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider6"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Amount_show_expsense_in_details"
-        android:layout_width="227dp"
-        android:layout_height="20dp"
+        android:layout_width="212dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:fontFamily="@font/cantora_one"
+        android:gravity="start"
         android:text="TextView"
-        android:textColor="#D50000"
-        android:textSize="16sp"
+        android:textColor="#FF3D00"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toEndOf="@+id/Amount_Desc_show_expennse_in_details"
         app:layout_constraintTop_toBottomOf="@+id/divider6"
         app:layout_constraintVertical_bias="0.038" />
@@ -70,63 +112,61 @@
         android:id="@+id/Date_description_show_expense_in_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bree_serif"
         android:text="Expense Date :"
         android:textColor="#FF6D00"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Date_show_Expenses_in_details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Amount_Desc_show_expennse_in_details"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Date_show_Expenses_in_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="20dp"
         android:text="TextView"
-        android:textColor="#301E1E"
-        android:textSize="16sp"
+        android:textColor="#76FF03"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toEndOf="@+id/Date_description_show_expense_in_details"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/Amount_Desc_show_expennse_in_details"
         app:layout_constraintTop_toBottomOf="@+id/Amount_show_expsense_in_details"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <View
-        android:id="@+id/divider7"
-        android:layout_width="391dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Date_show_Expenses_in_details"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bree_serif"
         android:text="Description"
-        android:textColor="#C54DE1"
+        android:textColor="#CAE91D"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider7"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintTop_toBottomOf="@+id/Date_description_show_expense_in_details"
+        app:layout_constraintVertical_bias="0.089" />
 
-    <TextView
-        android:id="@+id/Description_show_expenses_in_detail"
-        android:layout_width="340dp"
-        android:layout_height="377dp"
-        android:text="TextView"
-        android:textColor="#015D65"
+    <ImageView
+        android:id="@+id/back_Show_expenses_in_detail"
+        android:layout_width="102dp"
+        android:layout_height="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider7" />
+        app:layout_constraintTop_toBottomOf="@+id/Description_show_expenses_in_detail"
+        app:srcCompat="@drawable/back_bg" />
+
+    <ImageView
+        android:id="@+id/imageView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back_Show_expenses_in_detail"
+        app:layout_constraintEnd_toEndOf="@+id/back_Show_expenses_in_detail"
+        app:layout_constraintStart_toStartOf="@+id/back_Show_expenses_in_detail"
+        app:layout_constraintTop_toTopOf="@+id/back_Show_expenses_in_detail"
+        app:srcCompat="@drawable/back_txt" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
