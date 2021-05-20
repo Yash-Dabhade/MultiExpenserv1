@@ -145,7 +145,6 @@ public class Balance_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Balance_in.this,Home.class));
-                Toast.makeText(Balance_in.this, "Data Not Saved", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

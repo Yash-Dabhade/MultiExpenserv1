@@ -49,6 +49,7 @@ public class Home extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Download MultiExpenser ");
                 intent.putExtra(Intent.EXTRA_TEXT, "Regards of the day , try this amazing app to save your money named as MultiExpenser. Download it from the playStore");
                 startActivity(Intent.createChooser(intent, "choose one"));
+
             }
         });
 
@@ -57,6 +58,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this,new_expense_in.class));
+                finish();
             }
         });
 
@@ -65,6 +67,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, com.example.multiexpenserv1.Balance_in.class));
+                finish();
             }
         });
 
@@ -73,7 +76,9 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this,New_Goal.class));
+                finish();
             }
+
 
         });
 

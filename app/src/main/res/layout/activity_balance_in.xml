@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8FBF9"
     tools:context=".Balance_in">
 
     <ImageView
@@ -127,9 +128,10 @@
         android:layout_height="38dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView33"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toEndOf="@+id/imageView55"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444"
         app:srcCompat="@drawable/history" />
 
     <ImageView
@@ -335,5 +337,19 @@
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="@+id/year_holder_balance"
         app:layout_constraintTop_toTopOf="@+id/year_holder_balance" />
+
+    <TextView
+        android:id="@+id/Show_Expenses_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bree_serif"
+        android:text="Transactions"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toTopOf="@+id/imageView45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactions"
+        app:layout_constraintVertical_bias="0.121" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

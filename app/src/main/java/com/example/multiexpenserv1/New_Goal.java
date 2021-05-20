@@ -36,7 +36,6 @@ public class New_Goal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(New_Goal.this,Home.class));
-                Toast.makeText(New_Goal.this, "Data Not Saved", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

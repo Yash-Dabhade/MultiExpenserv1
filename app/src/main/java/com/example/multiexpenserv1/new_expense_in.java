@@ -46,7 +46,6 @@ public class new_expense_in extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(new_expense_in.this,Home.class));
-                Toast.makeText(new_expense_in.this, "Data Not Saved", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
