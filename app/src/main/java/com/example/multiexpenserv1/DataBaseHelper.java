@@ -48,7 +48,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTableBalanceStatement);
 
         //Creating Goal Table structure
-        String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT);";
+        String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT,STATUS TEXT);";
         //For executing the sql statement
         db.execSQL(CreateTableGoalStatement);
     }
@@ -105,8 +105,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(DAY,obj.getDay());
         cv.put(MONTH,obj.getMonth());
         cv.put(YEAR,obj.getYear());
-
-
+        cv.put(STATUS,obj.getStatus());
         //Inserting values into the table
         long insert=db.insert(GOAL_TABLE_NAME,null,cv);
         return insert != -1;
@@ -193,14 +192,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 String Day = cursor.getString(3);
                 String Month = cursor.getString(4);
                 String Year = cursor.getString(5);
-
+                String Status=cursor.getString(6);
 //                 create object using constructor
                 goal obj = new goal(Title,Type,Amount, Day, Month, Year);
+                obj.setStatus(Status);
                 returnList.add(obj);
             } while (cursor.moveToNext());
         }
         cursor.close();
         db.close();
         return returnList;
+    }
+
+    //Changing Goal status
+    public void ChangeGoalStatus(goal obj){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String title=obj.getTitle();
+        String day=obj.getDay();
+        String month=obj.getMonth();
+        String year=obj.getYear();
+        String query="UPDATE GOAL SET STATUS = "+obj.getStatus()+" WHERE TITLE = "+title+" AND DAY = "+day+" AND MONTH = "+month+" AND YEAR = "+year +" ;";
+        db.execSQL(query);
     }
 }

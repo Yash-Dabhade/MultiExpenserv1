@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Show_Expenses_In_Details"></activity>
+        <activity android:name=".Show_Goals_In_Details"></activity>
+        <activity android:name=".Show_Expenses_In_Details" />
         <activity android:name=".My_Goals" />
         <activity android:name=".show_transactions" />
         <activity android:name=".Show_Expenses" />

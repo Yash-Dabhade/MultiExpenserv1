@@ -1,7 +1,15 @@
 package com.example.multiexpenserv1;
 
 public class goal {
-    private String Title,Amount,Type,Day,Month,Year;
+    private String Title,Amount,Type,Day,Month,Year,Status;
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
 
     public goal(String title, String amount, String type, String day, String month, String year) {
         Title = title;

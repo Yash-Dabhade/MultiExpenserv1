@@ -58,6 +58,7 @@ public class New_Goal extends AppCompatActivity {
                 if(!(title.isEmpty()||amount.isEmpty()||day.isEmpty()||month.isEmpty()||year.isEmpty()||type.isEmpty())) {
                     //Creating object of expense and saving the data into it
                     goal obj = new goal(title, amount,type, day, month, year);
+                    obj.setStatus("PENDING");
                     //Creating database object
                     DataBaseHelper db = new DataBaseHelper(New_Goal.this);
                     boolean isSaved=false;
