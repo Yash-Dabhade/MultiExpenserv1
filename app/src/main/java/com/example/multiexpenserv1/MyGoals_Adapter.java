@@ -1,6 +1,7 @@
 package com.example.multiexpenserv1;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -93,6 +94,7 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
             intent.putExtra(Show_Goals_Category,Category);
             //Starting Activity
             context.startActivity(intent);
+            ((Activity)context).finish();
         }
     }
 }

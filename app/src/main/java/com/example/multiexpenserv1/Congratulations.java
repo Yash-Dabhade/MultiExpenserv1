@@ -18,6 +18,7 @@ public class Congratulations extends AppCompatActivity {
                 new java. util. TimerTask() {
                     @Override
                     public void run() {
+                        startActivity(new Intent(Congratulations.this,My_Goals.class));
                         finish();
                     }
                 },
