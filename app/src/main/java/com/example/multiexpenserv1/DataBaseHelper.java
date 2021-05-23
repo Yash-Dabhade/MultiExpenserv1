@@ -1,5 +1,6 @@
 package com.example.multiexpenserv1;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -205,13 +206,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     //Changing Goal status
-    public void ChangeGoalStatus(goal obj){
+    public void ChangeGoalStatus(String t){
         SQLiteDatabase db = this.getWritableDatabase();
-        String title=obj.getTitle();
-        String day=obj.getDay();
-        String month=obj.getMonth();
-        String year=obj.getYear();
-        String query="UPDATE GOAL SET STATUS = "+obj.getStatus()+" WHERE TITLE = "+title+" AND DAY = "+day+" AND MONTH = "+month+" AND YEAR = "+year +" ;";
+        String title=t;
+        String query="UPDATE  GOAL SET  STATUS = ACHIEVED  WHERE  TITLE = "+title+" ;";
         db.execSQL(query);
     }
 }

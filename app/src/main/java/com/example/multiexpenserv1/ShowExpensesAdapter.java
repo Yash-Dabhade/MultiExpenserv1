@@ -67,7 +67,7 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
             //Getting object at the clicked position
             expense e=expenseList.get(position);
 
-            //Starting intent
+            //Declaring intent
             Intent intent=new Intent(context,Show_Expenses_In_Details.class);
             //Initializing values from object
             String Title,Amount,Date,Description;

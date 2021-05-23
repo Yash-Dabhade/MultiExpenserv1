@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 public class New_Goal extends AppCompatActivity {
-
     private ImageView save,back,myGoals;
     private EditText Title,Amount,Type,Day,Month,Year;
     @Override
