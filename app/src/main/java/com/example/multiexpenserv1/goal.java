@@ -1,6 +1,16 @@
 package com.example.multiexpenserv1;
 
 public class goal {
+    private int ID;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
     private String Title,Amount,Type,Day,Month,Year,Status;
 
     public String getStatus() {

@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/artifika"
-        android:text="Category"
+        android:text=" Category :"
         android:textColor="#D500F9"
         app:layout_constraintBaseline_toBaselineOf="@+id/Category_Show_Goals_In_Details"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +174,7 @@
         app:srcCompat="@drawable/change_status_button" />
 
     <ImageView
-        android:id="@+id/imageView79"
+        android:id="@+id/Change_Status_Text_Show_Goals_In_Details"
         android:layout_width="119dp"
         android:layout_height="26dp"
         app:layout_constraintBottom_toBottomOf="@+id/Change_Status_Show_Goals_In_Details"

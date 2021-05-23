@@ -49,7 +49,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTableBalanceStatement);
 
         //Creating Goal Table structure
-        String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT,STATUS TEXT);";
+        String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT,STATUS TEXT,ID INTEGER PRIMARY KEY, AUTO INCREMENT);";
         //For executing the sql statement
         db.execSQL(CreateTableGoalStatement);
     }
@@ -194,9 +194,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 String Month = cursor.getString(4);
                 String Year = cursor.getString(5);
                 String Status=cursor.getString(6);
+                int Id=cursor.getInt(7);
 //                 create object using constructor
                 goal obj = new goal(Title,Type,Amount, Day, Month, Year);
                 obj.setStatus(Status);
+                obj.setID(Id);
                 returnList.add(obj);
             } while (cursor.moveToNext());
         }
@@ -206,10 +208,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     //Changing Goal status
-    public void ChangeGoalStatus(String t){
+    public void ChangeGoalStatus(int key){
         SQLiteDatabase db = this.getWritableDatabase();
-        String title=t;
-        String query="UPDATE  GOAL SET  STATUS = ACHIEVED  WHERE  TITLE = "+title+" ;";
+        String query="UPDATE  GOAL SET  STATUS = 'ACHIEVED' WHERE  ID = "+String.valueOf(key)+" ;";
         db.execSQL(query);
     }
 }

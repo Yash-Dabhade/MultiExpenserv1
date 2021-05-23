@@ -22,6 +22,7 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
     public static String Show_Goals_Category=" com.example.multiexpenserv1.Show_Goals_In_Details.Category";
     public static String Show_Goals_Date=" com.example.multiexpenserv1.Show_Goals_In_Details.Date";
     public static String Show_Goals_Status=" com.example.multiexpenserv1.Show_Goals_In_Details.Status";
+    public static String Show_Goals_ID=" com.example.multiexpenserv1.Show_Goals_In_Details.ID";
 
     //constructor for context
     public MyGoals_Adapter(List<goal> goalsList, Context context) {
@@ -76,13 +77,15 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
 
             //Initializing values from object
             String Title,Amount,Date,Status,Category;
+            int ID;
+            ID=obj.getID();
             Title=obj.getTitle();
             Amount=obj.getAmountWithRS();
             Date=obj.getDate();
             Status=obj.getStatus();
             Category=obj.getType();
-
             //Putting it in extras in intent
+            intent.putExtra(Show_Goals_ID,ID);
             intent.putExtra(Show_Goals_Title,Title);
             intent.putExtra(Show_Goals_Amount,Amount);
             intent.putExtra(Show_Goals_Date,Date);
