@@ -91,10 +91,8 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
             intent.putExtra(Show_Goals_Date,Date);
             intent.putExtra(Show_Goals_Status,Status);
             intent.putExtra(Show_Goals_Category,Category);
-
             //Starting Activity
             context.startActivity(intent);
-
         }
     }
 }
