@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("Last_Name",lname);
                         editor.putString("email",email);
                         //Adding Initial  Coins
-                        editor.putString("Coins","100");
+                        editor.putString("Coins","0");
+                        editor.putInt("Day",-1);
 
                         editor.apply();
                         startActivity(intent);
