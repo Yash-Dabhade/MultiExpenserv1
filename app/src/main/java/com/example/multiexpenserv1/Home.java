@@ -18,7 +18,7 @@ public class Home extends AppCompatActivity {
     private TextView name,balance;
     private  String fname;
     private String cbalance;
-    private ImageView share,newexpense,Balance_in,Goals;
+    private ImageView share,newexpense,Balance_in,Goals,Gifts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class Home extends AppCompatActivity {
         newexpense=findViewById(R.id.newexpense_button);
         Balance_in=findViewById(R.id.Balance_button);
         Goals=findViewById(R.id.Goals_button);
+        Gifts=findViewById(R.id.Gifts_Button);
         //Getting the user data from the sharedPreferences
         fname=sharedPreferences.getString("First_Name","");
         cbalance=sharedPreferences.getString("Current_Balance","");
@@ -77,5 +78,12 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        //Gifts Activity
+        Gifts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,Gifts_in.class));
+            }
+        });
     }
 }

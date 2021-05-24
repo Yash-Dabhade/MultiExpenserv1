@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("First_Name",fname);
                         editor.putString("Last_Name",lname);
                         editor.putString("email",email);
+                        //Adding Initial  Coins
+                        editor.putString("Coins","100");
+
                         editor.apply();
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_out_left,R.anim.slide_in_right);
