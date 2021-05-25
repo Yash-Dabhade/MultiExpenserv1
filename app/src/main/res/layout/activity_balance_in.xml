@@ -179,8 +179,8 @@
 
     <ImageView
         android:id="@+id/imageView63"
-        android:layout_width="38dp"
-        android:layout_height="39dp"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/balance_minus"
         app:layout_constraintEnd_toEndOf="@+id/balance_minus"
         app:layout_constraintHorizontal_bias="0.381"
